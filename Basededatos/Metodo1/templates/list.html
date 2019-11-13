@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+   <body>
+      <table border = 1>
+         <thead>
+            <th>Numero Tarea</th>
+            <th>Descripción Tarea</th>
+            <th>Tema clase</th>
+            <th>Fecha</th>
+			<th>Hora</th>	
+			<th>link</th>			
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row["numtar"]}}</td>
+               <td>{{row["destar"]}}</td>
+               <td> {{ row["temtar"]}}</td>
+               <td>{{row['fectar']}}</td>
+			   <td>{{row['hortar']}}</td>
+			   <td>{{row['lintar']}}</td>
+			   
+            </tr>
+         {% endfor %}
+      </table>
+
+      <a href = "/">Ir a la pagina principal</a>
+   </body>
+</html>
